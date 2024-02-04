@@ -1,0 +1,53 @@
+.dashboard {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tasklist {
+  margin: 10px;
+  padding: 10px;
+  background-color: #111205;
+  width: 272px;
+  border-radius: 12px;
+  color: #9fadbc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task {
+  margin-top: 10px;
+  background-color: #22272b;
+  padding: 8px 12px 4px;
+  border-radius: 8px;
+  min-height: 36px;
+  font-size: 13px;
+  flex-direction: column;
+  justify-content: center;
+  color: #b7c2ce;
+}
+
+.addtask {
+  display: flex;
+  margin-top: 8px;
+  min-height: 30px;
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.addtaskbutton {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  color: #9fadbc;
+  text-align: start;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.addtask:hover {
+  background-color: #22272b;
+  color: #fff;
+}
