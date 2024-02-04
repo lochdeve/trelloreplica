@@ -1,5 +1,6 @@
 import type { TaskType } from '@/app/types/index';
 import { useState } from 'react';
+import { GoProjectTemplate } from 'react-icons/go';
 import '../../index.css';
 import Task from '../Task';
 import AddTaskButton from './components/AddTaskButton';
@@ -35,7 +36,20 @@ const TaskList = (taskListInfo: { name: string }) => {
       {tasks.map((task) => {
         return <Task key={task.id} taskInfo={task} />;
       })}
-      <AddTaskButton />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: '100%',
+        }}
+      >
+        <AddTaskButton />
+        <div className='createtemplate'>
+          <button className='templatebutton'>
+            <GoProjectTemplate />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
