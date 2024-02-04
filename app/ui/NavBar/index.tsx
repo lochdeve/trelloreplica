@@ -14,11 +14,11 @@ const NavBar = () => {
         <Image src={'/trello.png'} width={100} height={30} alt='Trollo' />
         <div className='nav-links'>
           <div className='link'>
-            <span>Workspaces </span>
+            <span>Espacios de trabajo </span>
             <AiOutlineDown color='#9fadbc' className='link-icon' />
           </div>
           <div className='link'>
-            <span>Recent </span>
+            <span>Reciente </span>
             <AiOutlineDown color='#9fadbc' className='link-icon' />
           </div>
         </div>
