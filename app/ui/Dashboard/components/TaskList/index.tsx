@@ -25,10 +25,11 @@ const TaskList = (taskListInfo: { name: string }) => {
     <div className='tasklist'>
       <span
         style={{
-          fontSize: '14px',
+          fontSize: '15px',
           marginLeft: '10px',
           color: '##b7c2ce',
           fontWeight: 'bold',
+          padding: '5px 0 5px 0',
         }}
       >
         {taskListInfo.name}
