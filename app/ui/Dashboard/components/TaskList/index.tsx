@@ -2,8 +2,8 @@ import type { TaskType } from '@/app/types/index';
 import { useState } from 'react';
 import { GoProjectTemplate } from 'react-icons/go';
 import '../../index.css';
-import Task from '../Task';
 import AddTaskButton from './components/AddTaskButton';
+import Task from './components/Task';
 
 const TaskList = (taskListInfo: { name: string }) => {
   const [tasks, setTasks] = useState<TaskType[]>([
