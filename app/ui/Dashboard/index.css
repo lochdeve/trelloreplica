@@ -1,5 +1,8 @@
 .dashboard {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.tasklist-container {
   display: flex;
   flex-direction: row;
 }

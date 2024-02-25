@@ -26,7 +26,7 @@ const NavBar = () => {
       <div className='rightmenu'>
         <div className='input'>
           <IoSearch color='#9fadbc' className='input-icon' />
-          <input type='text' placeholder='Search' className='search' />
+          <input type='text' placeholder='Buscar' className='search' />
         </div>
         <div
           style={{

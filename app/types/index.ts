@@ -4,3 +4,8 @@ export type TaskType = {
   done: boolean;
   description: string;
 };
+
+export type DashboardType = {
+  id: number;
+  name: string;
+};
