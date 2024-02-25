@@ -1,0 +1,81 @@
+.enabledAddList {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  background-color: #4a81b0;
+  border: none;
+  border-radius: 12px;
+  height: 44px;
+  text-align: left;
+  width: 272px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.enabledAddList:hover {
+  background-color: #2b6ca3;
+}
+
+.addListForm {
+  background-color: #101305;
+  padding: 10px;
+  margin: 5px;
+  height: fit-content;
+  border-radius: 12px;
+  width: 272px;
+}
+
+.titleInput {
+  background-color: #101305;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.titleInput::placeholder {
+  color: #9fadbc;
+}
+
+.titleInput:hover {
+  background-color: #232629;
+  border: 2px solid #353a3e;
+}
+
+.titleInput:focus {
+  border: 2px solid #0c69eb;
+}
+
+.addListButton {
+  background-color: #579cfe;
+  border: none;
+  border-radius: 5px;
+  color: #2d4563;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  padding-inline: 10px;
+}
+
+.addListButton:hover {
+  background-color: #7ab2ff;
+}
+
+.closeAddListButton {
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closeAddListButton:hover {
+  background-color: #22272b;
+}

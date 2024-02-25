@@ -1,6 +1,7 @@
 'use client';
 import { DashboardType } from '@/app/types';
 import { useState } from 'react';
+import AddList from './components/AddList';
 import CardList from './components/CardList';
 import ToolBar from './components/ToolBar';
 import './index.css';
@@ -31,6 +32,19 @@ const Dashboard = () => {
     ],
   });
 
+  const addCardList = (title: string) => {
+    const newCardList = {
+      id: dashboard.cardLists.length,
+      title,
+      description: '',
+      done: false,
+    };
+    setDashboard({
+      ...dashboard,
+      cardLists: [...dashboard.cardLists, newCardList],
+    });
+  };
+
   return (
     <div className='dashboard'>
       <ToolBar dashboardInfo={dashboard} />
@@ -38,6 +52,8 @@ const Dashboard = () => {
         {dashboard.cardLists.map((taskList) => {
           return <CardList key={taskList.id} name={taskList.title} />;
         })}
+
+        <AddList updateDashboard={addCardList} />
       </div>
     </div>
   );
