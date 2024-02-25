@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
 }
-.tasklist-container {
+
+.cardlist-container {
   display: flex;
   flex-direction: row;
 }
 
-.tasklist {
+.cardlist {
   margin: 10px;
   padding: 10px;
   background-color: #111205;
@@ -19,7 +20,7 @@
   justify-content: space-between;
 }
 
-.task {
+.card {
   margin-top: 10px;
   background-color: #22272b;
   padding: 8px 12px 4px;
@@ -31,7 +32,7 @@
   color: #b7c2ce;
 }
 
-.addtask {
+.addcard {
   display: flex;
   width: 100%;
   margin-top: 8px;
@@ -43,7 +44,7 @@
   margin-right: 5px;
 }
 
-.addtaskbutton {
+.addcardbutton {
   background-color: transparent;
   border: none;
   width: 100%;
@@ -54,7 +55,7 @@
   cursor: pointer;
 }
 
-.addtask:hover {
+.addcard:hover {
   background-color: #22272b;
   color: #fff;
 }

@@ -1,28 +1,28 @@
-import type { TaskType } from '@/app/types/index';
+import type { CardType } from '@/app/types/index';
 import { useState } from 'react';
 import { GoProjectTemplate } from 'react-icons/go';
 import '../../index.css';
-import AddTaskButton from './components/AddTaskButton';
-import Task from './components/Task';
+import AddCardButton from './components/AddCardButton';
+import Card from './components/Card';
 
-const TaskList = (taskListInfo: { name: string }) => {
-  const [tasks, setTasks] = useState<TaskType[]>([
+const CardList = (cardListInfo: { name: string }) => {
+  const [cards, setCards] = useState<CardType[]>([
     {
       id: 1,
-      title: 'Task 1',
-      description: 'This is task 1',
+      title: 'Card 1',
+      description: 'This is Card 1',
       done: false,
     },
     {
       id: 2,
-      title: 'Task 2',
-      description: 'This is task 2',
+      title: 'Card 2',
+      description: 'This is Card 2',
       done: false,
     },
   ]);
 
   return (
-    <div className='tasklist'>
+    <div className='cardlist'>
       <span
         style={{
           fontSize: '15px',
@@ -32,10 +32,10 @@ const TaskList = (taskListInfo: { name: string }) => {
           padding: '5px 0 5px 0',
         }}
       >
-        {taskListInfo.name}
+        {cardListInfo.name}
       </span>
-      {tasks.map((task) => {
-        return <Task key={task.id} taskInfo={task} />;
+      {cards.map((task) => {
+        return <Card key={task.id} cardInfo={task} />;
       })}
       <div
         style={{
@@ -44,7 +44,7 @@ const TaskList = (taskListInfo: { name: string }) => {
           width: '100%',
         }}
       >
-        <AddTaskButton />
+        <AddCardButton />
         <div className='createtemplate'>
           <button className='templatebutton'>
             <GoProjectTemplate />
@@ -55,4 +55,4 @@ const TaskList = (taskListInfo: { name: string }) => {
   );
 };
 
-export default TaskList;
+export default CardList;

@@ -1,4 +1,4 @@
-export type TaskType = {
+export type CardType = {
   id: number;
   title: string;
   done: boolean;
@@ -8,4 +8,5 @@ export type TaskType = {
 export type DashboardType = {
   id: number;
   name: string;
+  cardLists: CardType[];
 };
