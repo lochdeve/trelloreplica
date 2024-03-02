@@ -28,6 +28,7 @@ const AddList: React.FC<{
           <button
             className='addListButton'
             onClick={() => {
+              if (!title) return;
               updateDashboard(title);
               setEnabled(false);
               setTitle('');
@@ -35,7 +36,10 @@ const AddList: React.FC<{
           >
             Añadir lista
           </button>
-          <button className='closeAddListButton'>
+          <button
+            className='closeAddListButton'
+            onClick={() => setEnabled(false)}
+          >
             <MdClose color='white' />
           </button>
         </div>
