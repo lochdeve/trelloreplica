@@ -5,7 +5,7 @@ import '../../index.css';
 import AddCardButton from './components/AddCardButton';
 import Card from './components/Card';
 
-const CardList = (cardListInfo: { name: string }) => {
+const CardList = (cardListInfo: { name: string; id: string }) => {
   const [cards, setCards] = useState<CardType[]>([
     {
       id: 1,
@@ -20,9 +20,22 @@ const CardList = (cardListInfo: { name: string }) => {
       done: false,
     },
   ]);
+  const addCard = (title: string) => {
+    const newCard = {
+      id: cards.length + 1,
+      title,
+      description: '',
+      done: false,
+    };
+    setCards([...cards, newCard]);
+  };
+  const [enableAddCard, setEnableAddCard] = useState(false);
+  const updateEnableAddCard = (status: boolean) => {
+    setEnableAddCard(status);
+  };
 
   return (
-    <div className='cardlist'>
+    <div className='cardlist' key={cardListInfo.id}>
       <span
         style={{
           fontSize: '15px',
@@ -44,12 +57,18 @@ const CardList = (cardListInfo: { name: string }) => {
           width: '100%',
         }}
       >
-        <AddCardButton />
-        <div className='createtemplate'>
-          <button className='templatebutton'>
-            <GoProjectTemplate />
-          </button>
-        </div>
+        <AddCardButton
+          addCard={addCard}
+          enableAddCard={enableAddCard}
+          updateEnableAddCard={updateEnableAddCard}
+        />
+        {enableAddCard ? null : (
+          <div className='createtemplate'>
+            <button className='templatebutton'>
+              <GoProjectTemplate />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

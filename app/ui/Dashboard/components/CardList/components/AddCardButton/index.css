@@ -1,0 +1,36 @@
+.titleInput {
+  width: 100%;
+  align-content: start;
+  margin-bottom: 10px;
+  background-color: #22272b;
+  font-weight: normal;
+  min-height: 36px;
+  max-height: 76px;
+  height: 56px;
+  line-height: normal;
+}
+
+.addNewCard {
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+}
+
+.closeaddcardbutton {
+  background-color: #111205;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.addCardButton {
+  background-color: #579cfe;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #2d4563;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  padding-inline: 10px;
+}

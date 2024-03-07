@@ -50,7 +50,13 @@ const Dashboard = () => {
       <ToolBar dashboardInfo={dashboard} />
       <div className='cardlist-container'>
         {dashboard.cardLists.map((taskList) => {
-          return <CardList key={taskList.id} name={taskList.title} />;
+          return (
+            <CardList
+              key={taskList.id}
+              name={taskList.title}
+              id={taskList.id.toString()}
+            />
+          );
         })}
 
         <AddList updateDashboard={addCardList} />
