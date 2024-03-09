@@ -8,6 +8,7 @@ import { MdPersonAddAlt1 } from 'react-icons/md';
 import { RiGroupLine } from 'react-icons/ri';
 import { SlOptions } from 'react-icons/sl';
 import { TiThListOutline } from 'react-icons/ti';
+import useResponsive from '../../hooks/useResponsive';
 import './index.css';
 
 type ToolBarProps = {
@@ -15,6 +16,7 @@ type ToolBarProps = {
 };
 
 const ToolBar: React.FC<ToolBarProps> = ({ dashboardInfo }) => {
+  const { isSmallScreen } = useResponsive();
   return (
     <div className='toolbar'>
       <div className='left-side'>
@@ -23,7 +25,13 @@ const ToolBar: React.FC<ToolBarProps> = ({ dashboardInfo }) => {
           <FaRegStar color='white' />
         </button>
         <button className='toolbar-button'>
-          <RiGroupLine /> Visible para el Espacio de trabajo
+          {isSmallScreen ? (
+            <RiGroupLine />
+          ) : (
+            <>
+              <RiGroupLine /> Visible para el Espacio de trabajo
+            </>
+          )}
         </button>
         <button className='dash-button'>
           <span
@@ -42,24 +50,37 @@ const ToolBar: React.FC<ToolBarProps> = ({ dashboardInfo }) => {
       </div>
       <div className='right-side'>
         <button className='toolbar-button'>
-          <HiOutlineRocketLaunch color='white' />
-          <span
-            style={{
-              marginLeft: '5px',
-            }}
-          >
-            Power-Ups
-          </span>
+          {isSmallScreen ? (
+            <HiOutlineRocketLaunch color='white' />
+          ) : (
+            <>
+              <HiOutlineRocketLaunch color='white' />
+              <span
+                style={{
+                  marginLeft: '5px',
+                }}
+              >
+                Power-Ups
+              </span>
+            </>
+          )}
         </button>
         <button className='toolbar-button'>
-          <BsFillLightningChargeFill />
-          <span
-            style={{
-              marginLeft: '5px',
-            }}
-          >
-            Automatización
-          </span>
+          {isSmallScreen ? (
+            <BsFillLightningChargeFill />
+          ) : (
+            <>
+              {' '}
+              <BsFillLightningChargeFill />
+              <span
+                style={{
+                  marginLeft: '5px',
+                }}
+              >
+                Automatización
+              </span>
+            </>
+          )}
         </button>
         <button className='toolbar-button'>
           <IoFilterSharp />
