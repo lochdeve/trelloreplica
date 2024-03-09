@@ -8,7 +8,7 @@ const useResponsive = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 1540px)');
 
-    const handleMediaQueryChange = (e) => {
+    const handleMediaQueryChange = (e: any) => {
       setIsSmallScreen(e.matches);
     };
 

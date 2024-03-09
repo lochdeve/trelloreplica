@@ -70,7 +70,6 @@ const ToolBar: React.FC<ToolBarProps> = ({ dashboardInfo }) => {
             <BsFillLightningChargeFill />
           ) : (
             <>
-              {' '}
               <BsFillLightningChargeFill />
               <span
                 style={{
