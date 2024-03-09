@@ -17,6 +17,15 @@ const AddList: React.FC<{
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder='Introduzca el título de la lista...'
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              if (!title) return;
+              updateDashboard(title);
+              setEnabled(false);
+              setTitle('');
+            }
+          }}
         />
         <div
           style={{

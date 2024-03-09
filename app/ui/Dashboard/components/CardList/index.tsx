@@ -5,27 +5,16 @@ import AddCardButton from './components/AddCardButton';
 import Card from './components/Card';
 import './index.css';
 
-const CardList = (cardListInfo: { name: string; id: string }) => {
-  const [cards, setCards] = useState<CardType[]>([
-    {
-      id: 1,
-      title: 'Card 1',
-      description: 'This is Card 1',
-      done: false,
-    },
-    {
-      id: 2,
-      title: 'Card 2',
-      description: 'This is Card 2',
-      done: false,
-    },
-  ]);
+const CardList = (cardListInfo: {
+  name: string;
+  id: string;
+  cardsArray: CardType[];
+}) => {
+  const [cards, setCards] = useState<CardType[]>(cardListInfo.cardsArray ?? []);
   const addCard = (title: string) => {
     const newCard = {
-      id: cards.length + 1,
+      id: (cards.length + 1).toString(),
       title,
-      description: '',
-      done: false,
     };
     setCards([...cards, newCard]);
   };

@@ -15,6 +15,15 @@ const AddCardButton: React.FC<AddCardButtonProps> = ({
   updateEnableAddCard,
 }) => {
   const [title, setTitle] = useState('');
+  const manageOnClick = () => {
+    if (title === '') {
+      updateEnableAddCard(false);
+      return;
+    }
+    addCard(title);
+    updateEnableAddCard(false);
+    setTitle('');
+  };
 
   if (!enableAddCard)
     return (
@@ -26,22 +35,20 @@ const AddCardButton: React.FC<AddCardButtonProps> = ({
 
   return (
     <div className='addNewCard'>
-      <input
+      <textarea
         className='titleInput'
-        type='text'
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder='Introduzca el título de la tarjeta...'
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            manageOnClick();
+          }
+        }}
+        placeholder='Introduzca un título para esta tarjeta...'
       />
       <div>
-        <button
-          className='addCardButton'
-          onClick={() => {
-            addCard(title);
-            updateEnableAddCard(false);
-            setTitle('');
-          }}
-        >
+        <button className='addCardButton' onClick={manageOnClick}>
           Añadir tarjeta
         </button>
         <button
