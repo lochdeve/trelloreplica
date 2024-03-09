@@ -12,7 +12,7 @@ const NavBar = () => {
       <div className='leftmenu'>
         <GiHamburgerMenu height={60} width={60} color='#9fadbc' />
         <Image
-          src={'trelloreplica/trello.png'}
+          src={'/trelloreplica/trello.png'}
           width={100}
           height={30}
           alt='Trollo'
