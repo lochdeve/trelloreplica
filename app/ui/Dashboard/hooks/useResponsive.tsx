@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 
 const useResponsive = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(
-    window.matchMedia('(max-width: 1540px)').matches
-  );
+  const [isSmallScreen, setIsSmallScreen] = useState<any>(null);
 
   useEffect(() => {
+    setIsSmallScreen(window.matchMedia('(max-width: 1540px)').matches);
     const mediaQuery = window.matchMedia('(max-width: 1540px)');
 
     const handleMediaQueryChange = (e: any) => {
