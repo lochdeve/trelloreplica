@@ -1,5 +1,5 @@
 import type { CardType } from '@/app/types/index';
-import '../../../../index.css';
+import '../../index.css';
 
 const Card: React.FC<{ cardInfo: CardType }> = ({ cardInfo }) => {
   return (

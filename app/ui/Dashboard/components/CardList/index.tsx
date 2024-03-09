@@ -1,9 +1,9 @@
 import type { CardType } from '@/app/types/index';
 import { useState } from 'react';
 import { GoProjectTemplate } from 'react-icons/go';
-import '../../index.css';
 import AddCardButton from './components/AddCardButton';
 import Card from './components/Card';
+import './index.css';
 
 const CardList = (cardListInfo: { name: string; id: string }) => {
   const [cards, setCards] = useState<CardType[]>([

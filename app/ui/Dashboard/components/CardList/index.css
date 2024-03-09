@@ -1,0 +1,46 @@
+.cardlist {
+  margin: 5px 5px 0px 5px;
+  padding: 10px;
+  background-color: #111205;
+  width: 272px;
+  border-radius: 12px;
+  color: #9fadbc;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.createtemplate {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  color: #9fadbc;
+  cursor: pointer;
+}
+
+.createtemplate:hover {
+  background-color: #22272b;
+}
+
+.templatebutton {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  color: #9fadbc;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.card {
+  margin-top: 10px;
+  background-color: #22272b;
+  padding: 8px 12px 4px;
+  border-radius: 8px;
+  min-height: 36px;
+  font-size: 13px;
+  flex-direction: column;
+  justify-content: center;
+  color: #b7c2ce;
+}
