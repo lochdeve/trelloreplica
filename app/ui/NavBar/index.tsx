@@ -11,7 +11,7 @@ const NavBar = () => {
     <nav className='navbar'>
       <div className='leftmenu'>
         <GiHamburgerMenu height={60} width={60} color='#9fadbc' />
-        <Image src={'/trello.png'} width={100} height={30} alt='Trollo' />
+        <Image src={'./trello.png'} width={100} height={30} alt='Trollo' />
         <div className='nav-links'>
           <div className='link'>
             <span>Espacios de trabajo </span>
