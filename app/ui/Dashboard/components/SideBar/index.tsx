@@ -20,7 +20,6 @@ const SideBar = () => {
           isSidebarOpen ? 'sidebar-toogle-open' : ''
         }`}
         onClick={() => {
-          console.log('click', isSidebarOpen);
           setIsSidebarOpen((prev) => !prev);
         }}
       >
