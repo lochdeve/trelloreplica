@@ -1,11 +1,13 @@
 .dashboard {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .cardlist-container {
   display: flex;
   flex-direction: row;
+  margin-left: 25px;
 }
 
 .addcard {

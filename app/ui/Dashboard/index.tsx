@@ -3,6 +3,7 @@ import { CardListType, DashboardType } from '@/app/types';
 import { useState } from 'react';
 import AddList from './components/AddList';
 import CardList from './components/CardList';
+import SideBar from './components/SideBar';
 import ToolBar from './components/ToolBar';
 import './index.css';
 
@@ -64,6 +65,7 @@ const Dashboard = () => {
 
   return (
     <div className='dashboard'>
+      <SideBar />
       <ToolBar dashboardInfo={dashboard} />
       <div className='cardlist-container'>
         {dashboard.cardLists.map((taskList) => {
