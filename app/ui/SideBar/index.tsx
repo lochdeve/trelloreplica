@@ -202,10 +202,10 @@ const SideBar = () => {
             color: '#94a3b1',
             fontSize: '14px',
             margin: '15px',
+            fontWeight: 'bold',
           }}
         >
-          {' '}
-          Sus tableros{' '}
+          Sus tableros
         </span>
       </nav>
     </div>
