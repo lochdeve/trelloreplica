@@ -7,7 +7,7 @@
 .cardlist-container {
   display: flex;
   flex-direction: row;
-  margin-left: 25px;
+  margin-left: 10px;
 }
 
 .addcard {

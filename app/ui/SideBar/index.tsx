@@ -1,8 +1,13 @@
+'use client';
 import Link from 'next/link';
 import { useState } from 'react';
 import { CiViewTable } from 'react-icons/ci';
 import { IoIosSettings } from 'react-icons/io';
-import { MdCalendarMonth, MdOutlinePersonOutline } from 'react-icons/md';
+import {
+  MdCalendarMonth,
+  MdKeyboardArrowLeft,
+  MdOutlinePersonOutline,
+} from 'react-icons/md';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import { TiThListOutline } from 'react-icons/ti';
 import './index.css';
@@ -11,9 +16,9 @@ const SideBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <div
-      style={{
-        height: '100%',
-      }}
+      className={
+        isSidebarOpen ? 'sidebar-container-open' : 'sidebar-container-close'
+      }
     >
       <button
         className={`sidebar-toogle ${
@@ -32,9 +37,33 @@ const SideBar = () => {
       >
         <div className='sidebar-header'>
           <div className='sidebar-header-icon'>E</div>
-          <span className='sidebar-header-title'>
-            Espacio de trabajo de Trello
-          </span>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '5px',
+            }}
+          >
+            <span className='sidebar-header-title'>
+              Espacio de trabajo de Trello
+            </span>
+            <span
+              style={{
+                fontSize: '12px',
+                color: '#94a3b1',
+              }}
+            >
+              Gratuito
+            </span>
+          </div>
+          <button
+            className='sidebar-header-close'
+            onClick={() => {
+              setIsSidebarOpen((prev) => !prev);
+            }}
+          >
+            <MdKeyboardArrowLeft color='white' size={20} />
+          </button>
         </div>
         <ul
           style={{
