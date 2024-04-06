@@ -1,3 +1,5 @@
+import Dashboard from './Dashboard/page';
+
 export default function Home() {
-  return <span>fdas</span>;
+  return <Dashboard />;
 }
