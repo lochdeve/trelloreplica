@@ -76,7 +76,7 @@ const SideBar = () => {
         >
           <li>
             <Link
-              href={'/'}
+              href={'/boards'}
               style={{
                 display: 'flex',
                 alignItems: 'center',
